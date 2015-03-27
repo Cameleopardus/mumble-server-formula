@@ -1,4 +1,4 @@
-{% from "mumbleserver/map.jinja" import mumbleserver with context %}
+{% from "mumble-server/map.jinja" import mumbleserver with context %}
 
 mumbleserver:
   {% if mumbleserver.server is defined %}
