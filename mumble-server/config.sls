@@ -1,4 +1,4 @@
-{% from "vsftpd/map.jinja" import vsftpd with context %}
+{% from "mumble-server/map.jinja" import mumbleserver with context %}
 
 include:
   - mumble-server
@@ -12,4 +12,3 @@ mumbleserver_config:
     - mode: 644
     - watch_in:
       - service: {{ mumbleserver.service }}
-
