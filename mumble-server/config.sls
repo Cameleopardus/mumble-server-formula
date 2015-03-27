@@ -6,7 +6,7 @@ include:
 mumbleserver_config:
   file.managed:
     - name: {{ mumbleserver.mumbleserver_config }}
-    - source: {{ mumbleserver.mumbleserver_config }}
+    - source: {{ mumbleserver.mumbleserver_config_src }}
     - template: jinja
     - user: root
     - mode: 644
