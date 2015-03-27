@@ -1,15 +1,15 @@
 {% from "vsftpd/map.jinja" import vsftpd with context %}
 
 include:
-  - vsftpd
+  - mumble-server
 
-vsftpd_config:
+mumbleserver_config:
   file.managed:
-    - name: {{ vsftpd.vsftpd_config }}
-    - source: {{ vsftpd.vsftpd_config_src }}
+    - name: {{ mumbleserver.mumbleserver_config }}
+    - source: {{ mumbleserver.mumbleserver_config }}
     - template: jinja
     - user: root
     - mode: 644
     - watch_in:
-      - service: {{ vsftpd.service }}
+      - service: {{ mumbleserver.service }}
 
