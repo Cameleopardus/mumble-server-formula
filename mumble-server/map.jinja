@@ -1,0 +1,8 @@
+{% set mumbleserver = salt['grains.filter_by']({
+    'Debian': {
+        'server': 'mumble-server',
+        'service': 'mumble-server',
+        'mumbleserver_config': '/etc/mumble-server.ini',
+        'mumbleserver_config_src': 'salt://mumble-server/files/mumble-server.ini',
+    },
+}, merge=salt['pillar.get']('mumbleserver:lookup')) %}
